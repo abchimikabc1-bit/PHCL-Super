@@ -78,7 +78,7 @@ export function ImageUpload({
           preview,
           name: file.name,
           size: file.size,
-          uploadedAt: new Date(),
+          uploadedAt: new Date().toISOString(),
         };
         newImages.push(uploadedImage);
       } catch (err) {
