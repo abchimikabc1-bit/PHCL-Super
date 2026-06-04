@@ -13,7 +13,7 @@ interface UploadedImage {
   preview: string;
   name: string;
   size: number;
-  uploadedAt: Date;
+  uploadedAt: string;
 }
 
 interface ImageUploadProps {
@@ -223,7 +223,8 @@ export function ImageUpload({
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all flex items-center justify-center">
                   {/* Remove button */}
                   <button
-                    onClick={() => removeImage(image.id)}
+  type="button"
+  onClick={() => removeImage(image.id)}
                     className="p-2 bg-red-600 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                   >
                     <X size={20} />
